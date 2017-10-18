@@ -1,0 +1,199 @@
+﻿@model IEnumerable<Practice.Models.Category>
+@{
+    ViewBag.Title = "商品管理";
+}
+<div class="row">
+    <div class="col-7 text-right">
+        <div class="h3">商品管理</div>
+    </div>
+    <div class="col bd-example text-right">
+        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalLive">
+            新增產品
+        </button>
+    </div>
+</div>
+<div id="exampleModalLive" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <h5 class="modal-title col-7 text-right" id="exampleModalLiveLabel">新增產品</h5>
+                <div class="col-5 text-right">
+                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="row m-0">
+                    <div class="col-7 pl-0">
+
+                        <div class="form-row m-0">
+                            <div class="col-4 p-0">
+                                <Label Class="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="ProductNameLabel" runat="server"for="ProductName">產品名稱</Label>
+                            </div>
+                            <div class="col-8 p-0">
+                                <input Class="form-control right-circle-border form-control-sm line-height" ID="ProductName" runat="server" placeholder="請輸入產品名稱" />
+                            </div>
+                        </div>
+
+                        <div class="form-row m-0">
+                            <div class="col-4 p-0">
+                                <Label Class="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="MarkPriceLabel" runat="server" for="MarkPrice">市場售價</Label>
+                            </div>
+                            <div class="col-8 p-0">
+                                <input type="number" Class="form-control right-circle-border form-control-sm line-height" ID="MarkPrice" runat="server" placeholder="請輸入市場售價" />
+                            </div>
+                        </div>
+
+                        <div class="form-row m-0">
+                            <div class="col-4 p-0">
+                                <Label Class="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="UnitPriceLabel" runat="server" for="UnitPrice">預計售價</Label>
+                            </div>
+                            <div class="col-8 p-0">
+                                <input type="number" Class="form-control right-circle-border form-control-sm line-height" ID="UnitPrice" runat="server" placeholder="請輸入預計售價" />
+                                <asp:TextBox TextMode="Number" Text='<%# Bind("UnitPrice") %>' CssClass="form-control right-circle-border form-control-sm line-height" ID="UnitPriceTextBox" runat="server" placeholder="請輸入預計售價" />
+                            </div>
+                        </div>
+
+                        @*<div class="form-row m-0">
+                            <div class="col-4 p-0">
+                                <asp:Label CssClass="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="Label4" runat="server" Text="總銷售量:" AssociatedControlID="TotalQTYTextBox"></asp:Label>
+                            </div>
+                            <div class="col-8 p-0">
+                                <asp:TextBox TextMode="Number" Text='<%# Bind("TotalQTY") %>' CssClass="form-control right-circle-border form-control-sm line-height" ID="TotalQTYTextBox" runat="server" placeholder="請輸入總銷售量" />
+                            </div>
+                        </div>*@
+
+                        @*<div class="form-row m-0">
+                            <div class="col-4 p-0">
+                                <asp:Label CssClass="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="Label5" runat="server" Text="總銷售量:" AssociatedControlID="CanSaleQTYTextBox"></asp:Label>
+                            </div>
+                            <div class="col-8 p-0">
+                                <asp:TextBox TextMode="Number" Text='<%# Bind("CanSaleQTY") %>' CssClass="form-control right-circle-border form-control-sm line-height" ID="CanSaleQTYTextBox" runat="server" placeholder="請輸入當前可銷售量" />
+                            </div>
+                        </div>*@
+
+                        @*<div class="form-row m-0">
+                            <div class="col-4 p-0">
+                                <asp:Label CssClass="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="Label6" runat="server" Text="已銷售量:" AssociatedControlID="QuantitySoldTextBox"></asp:Label>
+                            </div>
+                            <div class="col-8 p-0">
+                                <asp:TextBox TextMode="Number" Text='<%# Bind("QuantitySold") %>' CssClass="form-control right-circle-border form-control-sm line-height" ID="QuantitySoldTextBox" runat="server" placeholder="請輸入已銷售量" />
+                            </div>
+                        </div>*@
+
+                        @*<div class="form-row m-0">
+                            <div class="col-4 p-0">
+                                <asp:Label CssClass="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="Label7" runat="server" Text="開始銷售日:" AssociatedControlID="SellStartDateTextBox"></asp:Label>
+                            </div>
+                            <div class="col-8 p-0">
+                                <asp:TextBox TextMode="Date" Text='<%# Bind("SellStartDate") %>' CssClass="form-control right-circle-border form-control-sm" ID="SellStartDateTextBox" runat="server" placeholder="請輸入開始銷售日" />
+                            </div>
+                        </div>*@
+
+                        @*<div class="form-row m-0">
+                            <div class="col-4 p-0">
+                                <asp:Label CssClass="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="Label8" runat="server" Text="結束銷售日:" AssociatedControlID="SellEndDateTextBox"></asp:Label>
+                            </div>
+                            <div class="col-8 p-0">
+                                <asp:TextBox TextMode="Date" Text='<%# Bind("SellEndDate") %>' CssClass="form-control right-circle-border form-control-sm" ID="SellEndDateTextBox" runat="server" placeholder="請輸入結束銷售日" />
+                            </div>
+                        </div>*@
+
+                        @*<div class="form-row m-0">
+                            <div class="col-4 p-0">
+                                <asp:Label CssClass="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="Label9" runat="server" Text="出貨日:" AssociatedControlID="ShippedDateTextBox"></asp:Label>
+                            </div>
+                            <div class="col-8 p-0">
+                                <asp:TextBox TextMode="Date" Text='<%# Bind("ShippedDate") %>' CssClass="form-control right-circle-border form-control-sm" ID="ShippedDateTextBox" runat="server" placeholder="請輸入出貨日" />
+                            </div>
+                        </div>*@
+                        @*<div class="row">
+                            <div class="col m-1">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <asp:CheckBox Checked='<%# Bind("PreOrder") %>' runat="server" ID="PreOrderCheckBox" />
+                                    </span>
+                                    <asp:Label class="form-control form-control-sm right-circle-border" ID="Label17" runat="server" Text="開放預購"></asp:Label>
+                                </div>
+                            </div>
+                            <div class="col m-1">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <asp:CheckBox Checked='<%# Bind("Discounted") %>' runat="server" ID="DiscountedCheckBox" />
+                                    </span>
+                                    <asp:Label class="form-control form-control-sm right-circle-border" ID="Label18" runat="server" Text="特價商品"></asp:Label>
+                                </div>
+                            </div>
+                        </div>*@
+                        @*<div class="row">
+                            <div class="col m-1">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <asp:CheckBox Checked='<%# Bind("DiscountedCombo") %>' runat="server" ID="DiscountedComboCheckBox" />
+                                    </span>
+                                    <asp:Label class="form-control form-control-sm right-circle-border" ID="Label19" runat="server" Text="組合折扣"></asp:Label>
+                                </div>
+                            </div>
+                            <div class="col m-1">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <asp:CheckBox Checked='<%# Bind("DiscountedPoint") %>' runat="server" ID="DiscountedPointCheckBox" />
+                                    </span>
+                                    <asp:Label class="form-control form-control-sm right-circle-border" ID="Label20" runat="server" Text="折扣點數"></asp:Label>
+                                </div>
+                            </div>
+                        </div>*@
+
+                        @*<div class="form-group  mb-0">
+                            <label for="ProductDescriptionTextBox">產品描述:</label>
+                            <asp:TextBox class="form-control" ID="ProductDescriptionTextBox" Text='<%# Bind("ProductDescription") %>' TextMode="MultiLine" Rows="4" runat="server" />
+                        </div>*@
+
+                    </div>
+                    <div class="col-5 border images-heigth">
+                        @*<form>
+                            <div class="form-group images">
+                                <label for="exampleFormControlFile1">新增圖片</label>
+                                <input multiple type="file" class="form-control-file upl" id="exampleFormControlFile1">
+                            </div>
+                        </form>*@
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer text-center d-block">
+                @*<asp:Button CssClass="btn btn-primary" runat="server" CommandName="Insert" Text="新增" ID="InsertButton" OnClientClick="return getSupplierID()" />
+                <asp:Button CssClass="btn btn-secondary" runat="server" CommandName="Cancel" Text="取消" ID="CancelButton" /><br />*@
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<table id="myTable" class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>分類編號</th>
+            <th>分類名稱</th>
+            <th>描述</th>
+            <th>編輯</th>
+            <th>刪除</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var _category in Model)
+        {
+            <tr>
+                <td>@_category.CategoryID</td>
+                <td>@_category.CategoryName</td>
+                <td>@_category.Description</td>
+                <td><a href="~/Category/Edit/@_category.CategoryID" class="btn btn-primary">編輯</a></td>
+                <td><a href="~/Category/Delete/@_category.CategoryID" class="btn btn-primary">刪除</a></td>
+            </tr>
+        }
+    </tbody>
+</table>*@
+
+
