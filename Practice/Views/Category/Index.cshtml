@@ -48,58 +48,58 @@
 
                         <div class="form-row m-0">
                             <div class="col-4 p-0">
-                                <Label Class="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="UnitPriceLabel" runat="server" for="UnitPrice">預計售價</Label>
+                                <Label Class="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="UnitPriceLabel" runat="server" for="UnitPrice">請輸入預計售價</Label>
                             </div>
                             <div class="col-8 p-0">
                                 <input type="number" Class="form-control right-circle-border form-control-sm line-height" ID="UnitPrice" runat="server" placeholder="請輸入預計售價" />
-                                <asp:TextBox TextMode="Number" Text='<%# Bind("UnitPrice") %>' CssClass="form-control right-circle-border form-control-sm line-height" ID="UnitPriceTextBox" runat="server" placeholder="請輸入預計售價" />
                             </div>
                         </div>
 
-                        @*<div class="form-row m-0">
+                        <div class="form-row m-0">
                             <div class="col-4 p-0">
-                                <asp:Label CssClass="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="Label4" runat="server" Text="總銷售量:" AssociatedControlID="TotalQTYTextBox"></asp:Label>
+                                <Label Class="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="TotalQTYLabel" runat="server" for="TotalQTY">預計售價</Label>
                             </div>
                             <div class="col-8 p-0">
-                                <asp:TextBox TextMode="Number" Text='<%# Bind("TotalQTY") %>' CssClass="form-control right-circle-border form-control-sm line-height" ID="TotalQTYTextBox" runat="server" placeholder="請輸入總銷售量" />
+                                <input type="number" Class="form-control right-circle-border form-control-sm line-height" ID="TotalQTY" runat="server" placeholder="請輸入總銷售量" />
                             </div>
-                        </div>*@
+                        </div>
 
-                        @*<div class="form-row m-0">
+                        <div class="form-row m-0">
                             <div class="col-4 p-0">
-                                <asp:Label CssClass="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="Label5" runat="server" Text="總銷售量:" AssociatedControlID="CanSaleQTYTextBox"></asp:Label>
+                                <Label Class="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="CanSaleQTYLabel" runat="server" for="CanSaleQTY">總銷售量</Label>
                             </div>
                             <div class="col-8 p-0">
-                                <asp:TextBox TextMode="Number" Text='<%# Bind("CanSaleQTY") %>' CssClass="form-control right-circle-border form-control-sm line-height" ID="CanSaleQTYTextBox" runat="server" placeholder="請輸入當前可銷售量" />
+                                <input type="number" Class="form-control right-circle-border form-control-sm line-height" ID="CanSaleQTY" runat="server" placeholder="請輸入當前可銷售量" />
                             </div>
-                        </div>*@
+                        </div>
 
-                        @*<div class="form-row m-0">
+                        <div class="form-row m-0">
                             <div class="col-4 p-0">
-                                <asp:Label CssClass="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="Label6" runat="server" Text="已銷售量:" AssociatedControlID="QuantitySoldTextBox"></asp:Label>
+                                <Label Class="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="QuantitySoldLabel" runat="server" for="QuantitySold">已銷售量</Label>
                             </div>
                             <div class="col-8 p-0">
-                                <asp:TextBox TextMode="Number" Text='<%# Bind("QuantitySold") %>' CssClass="form-control right-circle-border form-control-sm line-height" ID="QuantitySoldTextBox" runat="server" placeholder="請輸入已銷售量" />
+                                <input type="number" Class="form-control right-circle-border form-control-sm line-height" ID="QuantitySold" runat="server" placeholder="請輸入已銷售量" />
                             </div>
-                        </div>*@
+                        </div>
 
-                        @*<div class="form-row m-0">
+                        <div class="form-row m-0">
                             <div class="col-4 p-0">
-                                <asp:Label CssClass="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="Label7" runat="server" Text="開始銷售日:" AssociatedControlID="SellStartDateTextBox"></asp:Label>
+                                <Label Class="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="SellStartDateLabel" runat="server" for="SellStartDate">開始銷售日</Label>
                             </div>
                             <div class="col-8 p-0">
-                                <asp:TextBox TextMode="Date" Text='<%# Bind("SellStartDate") %>' CssClass="form-control right-circle-border form-control-sm" ID="SellStartDateTextBox" runat="server" placeholder="請輸入開始銷售日" />
+                                <input type="date" Class="form-control right-circle-border form-control-sm" ID="SellStartDate" runat="server" placeholder="請輸入開始銷售日" />
                             </div>
-                        </div>*@
+                        </div>
 
-                        @*<div class="form-row m-0">
+                        <div class="form-row m-0">
                             <div class="col-4 p-0">
-                                <asp:Label CssClass="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="Label8" runat="server" Text="結束銷售日:" AssociatedControlID="SellEndDateTextBox"></asp:Label>
+                                <Label Class="form-control left-circle-border pr-0 pl-1 border-right-0 text-center form-control-sm line-height" ID="SellEndDateLabel" runat="server" for="SellEndDate">開始銷售日</Label>
                             </div>
                             <div class="col-8 p-0">
+                                <input type="date" Class="form-control right-circle-border form-control-sm" ID="SellStartDate" runat="server" placeholder="請輸入結束銷售日" />
                                 <asp:TextBox TextMode="Date" Text='<%# Bind("SellEndDate") %>' CssClass="form-control right-circle-border form-control-sm" ID="SellEndDateTextBox" runat="server" placeholder="請輸入結束銷售日" />
                             </div>
-                        </div>*@
+                        </div>
 
                         @*<div class="form-row m-0">
                             <div class="col-4 p-0">
